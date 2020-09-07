@@ -1,14 +1,18 @@
 # your deb name
 deb_name="my_deb"
 # your executable file name
-executable_name=hello_exe
+executable_folder=executables
+# your libs
+libs_folder=libs
 # make your file executable
-chmod +x $executable_name
+chmod +x executables/*
 # make the debian directory for deb
 mkdir $deb_name && mkdir $deb_name/DEBIAN
 mkdir -p $deb_name/usr/local/bin
+mkdir -p $deb_name/usr/local/lib
 # arrange required files inside the deb directory
-cp $executable_name $deb_name/usr/local/bin
+cp -r executables/* $deb_name/usr/local/bin
+cp -r libs/* $deb_name/usr/local/lib
 cp control $deb_name/DEBIAN
 # make post installation file executable
 chmod +x postinst 

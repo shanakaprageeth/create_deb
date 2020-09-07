@@ -1,4 +1,4 @@
-Source: debhello
+Source: my_deb
 Section: unknown
 Priority: optional
 Maintainer: "Firstname Lastname" <email.address@example.org>
@@ -6,7 +6,7 @@ Build-Depends: debhelper (>=11~)
 Standards-Version: 4.1.4
 Version:0.1
 Homepage: <insert the upstream URL, if relevant>
-Package: debhello
+Package: my_deb
 Architecture: amd64
 Multi-Arch: foreign
 Depends: 
